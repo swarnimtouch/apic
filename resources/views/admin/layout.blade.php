@@ -484,13 +484,13 @@
     <nav class="sidebar-nav">
         <div class="nav-section">
             <div class="nav-label">Main</div>
-            <a href="/admin/dashboard" class="nav-item {{ request()->is('admin/dashboard') ? 'active' : '' }}">
+            <a href="{{route('admin.dashboard')}}" class="nav-item {{ request()->is('admin/dashboard') ? 'active' : '' }}">
                 <span class="nav-icon">⚡</span> Dashboard
             </a>
         </div>
         <div class="nav-section">
             <div class="nav-label">Management</div>
-            <a href="/admin/doctors" class="nav-item {{ request()->is('admin/doctors') ? 'active' : '' }}">
+            <a href="{{route('admin.doctors')}}" class="nav-item {{ request()->is('admin/doctors') ? 'active' : '' }}">
                 <span class="nav-icon">👨‍⚕️</span> Doctors
             </a>
         </div>
