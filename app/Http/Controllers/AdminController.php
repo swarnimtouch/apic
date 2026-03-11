@@ -31,8 +31,8 @@ class AdminController extends Controller
                 'admin_name'      => $user->name,
                 'admin_email'     => $user->email,
             ]);
-            return redirect('/admin/dashboard')->with('success', 'Welcome back, ' . $user->name . '!');
-        }
+            return redirect()->route('admin.dashboard')
+                ->with('success', 'Welcome back, ' . $user->name . '!');        }
 
         return back()->withErrors(['email' => 'Invalid email or password.'])->withInput();
     }
