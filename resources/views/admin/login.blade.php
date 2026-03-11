@@ -143,8 +143,9 @@
         <div class="alert-error">❌ {{ $errors->first() }}</div>
     @endif
 
-    <form method="POST" action="/admin/login">
-        @csrf
+    <form method="POST" action="{{ route('admin.check') }}">
+
+    @csrf
         <div class="form-group">
             <label>Email Address</label>
             <div class="input-wrap">
