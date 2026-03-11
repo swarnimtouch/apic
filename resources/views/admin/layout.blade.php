@@ -526,9 +526,15 @@
                             <div class="dropdown-role">Online</div>
                         </div>
                     </div>
-                    <a href="/admin/logout" class="dropdown-logout">
+                    <a href="{{ route('admin.logout') }}"
+                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                       class="dropdown-logout">
                         🚪 Logout
                     </a>
+
+                    <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display:none;">
+                        @csrf
+                    </form>
                 </div>
             </div>
         </div>
