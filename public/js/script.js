@@ -5,7 +5,44 @@ document.addEventListener('DOMContentLoaded', function () {
         offset: 100,
         easing: 'ease-in-out'
     });
+
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2, // Default: Mobile me 2 images dikhengi
+        spaceBetween: 20, // Images ke beech ka gap
+        loop: true,       // Continuous slide hota rahega
+        autoplay: {
+            delay: 2500,  // 2.5 second me apne aap slide hoga
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        // Breakpoints taaki har device me perfect dikhe
+        breakpoints: {
+            640: {
+                slidesPerView: 3, // Tablet me 3
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 4, // Badi tablet me 4
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 5, // Laptop/Desktop me 5 dikhengi (swipe karke 7 dekh sakte hai)
+                spaceBetween: 30,
+            },
+        },
+    });
 });
+
+// === YAHAN SE NAYA FIX ADD KIYA HAI ===
+// Ye ensure karega ki jab images aur slider poori tarah load ho jayein, tab AOS refresh ho 
+// aur niche ka content gayab na ho.
+window.addEventListener('load', function() {
+    AOS.refresh();
+});
+// === FIX YAHAN KHATAM HUA ===
 
 $(document).ready(function () {
 

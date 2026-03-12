@@ -175,9 +175,61 @@ input.error, select.error {
     box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
 
+.top-logo {
+    max-height: 200px; 
+    object-fit: contain;
+}
+
+.top-store-btn {
+    height: 60px; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.top-store-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* --- Swiper Slider CSS --- */
+.swiper {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+}
+
+.swiper-slide:active {
+    cursor: grabbing;
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.5); /* Image ke aaju baju halki white border aayegi */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-purple) !important;
+}
+
+/* Video player container ko thoda curve (border-radius) dene ke liye */
+.video-box .ratio {
+    border-radius: 20px !important; 
+    /* Aap is 20px ko kam ya zyada kar sakte hain apne hisaab se */
+}
+
 @media (min-width: 992px) {
     .video-box {
-        max-width: 480px; 
+        max-width: 95%; /* Size badhane ke liye 480px se 650px kar diya */
         margin: 0;
     }
 }
