@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
 <body>
@@ -16,25 +17,44 @@
     <header class="hero-section text-center">
         <div class="overlay"></div>
 
-        <div class="container position-relative z-index-2">
-            <div class="mb-4" data-aos="fade-down">
-                <img src="{{asset('images/logo.png')}}" alt="APIC Logo" class="app-logo">
+        <div class="d-flex justify-content-between align-items-start w-100 position-absolute top-0 start-0 p-3 px-md-4 pt-md-3" style="z-index: 1050;">
+            
+            <div data-aos="fade-down">
+                <img src="{{asset('images/logo.png')}}" alt="APIC Logo" class="top-logo">
             </div>
 
-            <div class="launch-badge mb-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="d-flex flex-column gap-2" data-aos="fade-down">
+                <img src="{{asset('images/ios.png')}}" alt="iOS App" class="top-store-btn">
+                
+                <a href="https://play.google.com/store/apps/details?id=com.savethefeet" target="_blank">
+                    <img src="{{asset('images/android.png')}}" alt="Android App" class="top-store-btn">
+                </a>
+            </div>
+        </div>
+
+        <div class="container position-relative z-index-2">
+            <div class="launch-badge mb-3 mt-5" data-aos="zoom-in" data-aos-delay="100">
                 <i class="fas fa-rocket me-2"></i> Launching Soon - 1st April (Part 1)
             </div>
 
-            <h1 class="display-4 fw-bold text-dark mb-3" data-aos="fade-up" data-aos-delay="200">
+            <h1 class="display-4 fw-bold text-dark mb-3 mt-5" data-aos="fade-up" data-aos-delay="200">
                 Transforming Clinical Decisions with AI
             </h1>
             <p class="lead text-secondary mb-5 mx-auto" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="300">
                 APIC is an advanced AI clinical decision support tool designed specifically for diabetic foot ulcer patients, empowering healthcare professionals with real-time insights.
             </p>
 
-            <div class="store-badges mb-5" data-aos="fade-up" data-aos-delay="400">
-                <img src="{{asset('images/playstore.png')}}" alt="Get it on Google Play" class="store-btn me-3">
-                <img src="{{asset('images/appstore.png')}}" alt="Download on the App Store" class="store-btn">
+            <div class="swiper mySwiper mt-4 mb-5" data-aos="fade-up" data-aos-delay="400">
+                <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide"><img src="{{asset('images/slide1.jpg')}}" alt="Slide 1" class="img-fluid rounded shadow-sm"></div>
+                    <div class="swiper-slide"><img src="{{asset('images/slide2.jpg')}}" alt="Slide 2" class="img-fluid rounded shadow-sm"></div>
+                    <div class="swiper-slide"><img src="{{asset('images/slide3.jpg')}}" alt="Slide 3" class="img-fluid rounded shadow-sm"></div>
+                    <div class="swiper-slide"><img src="{{asset('images/slide4.jpg')}}" alt="Slide 4" class="img-fluid rounded shadow-sm"></div>
+                    <div class="swiper-slide"><img src="{{asset('images/slide5.jpg')}}" alt="Slide 5" class="img-fluid rounded shadow-sm"></div>
+                    <div class="swiper-slide"><img src="{{asset('images/slide6.jpg')}}" alt="Slide 6" class="img-fluid rounded shadow-sm"></div>
+                    <div class="swiper-slide"><img src="{{asset('images/slide7.jpg')}}" alt="Slide 7" class="img-fluid rounded shadow-sm"></div>
+                </div>
+                <div class="swiper-pagination mt-4 position-relative"></div>
             </div>
         </div>
     </header>
@@ -77,8 +97,9 @@
 
     <section class="interact-section dark-gradient-section py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start" data-aos="fade-right">
+            <div class="row align-items-center justify-content-between">
+                
+                <div class="col-lg-7 mb-5 mb-lg-0 text-center text-lg-start" data-aos="fade-right">
                     <h3 class="fw-bold text-white mb-4">Discover More</h3>
                     <div class="video-box mt-4">
                         <p class="fw-semibold text-light mb-2"><i class="fas fa-play-circle text-info me-2"></i>APIC Process Flow</p>
@@ -88,13 +109,13 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6" data-aos="fade-left">
+                <div class="col-lg-5" data-aos="fade-left">
                     <div class="registration-card p-4 p-md-5 rounded shadow-lg">
-                        <h3 class="fw-bold mb-3 theme-text">Get Early Access</h3>
+                        <h3 class="fw-bold mb-3 theme-text">Our team will contact you soon!</h3>
                         <p class="text-muted mb-4">Register now to be notified the moment APIC goes live.</p>
                         <form id="registrationForm" method="POST" action="{{ route('doctor.store') }}">
                             @csrf
-                        <div class="mb-3">
+                            <div class="mb-3">
                                 <label for="fullName" class="form-label fw-semibold">Full Name</label>
                                 <input type="text" class="form-control custom-input" id="fullName" name="fullName" placeholder="Enter your full name">
                             </div>
@@ -147,6 +168,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="{{asset('js/script.js')}}"></script>
 </body>
 </html>
