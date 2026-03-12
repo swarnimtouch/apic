@@ -176,7 +176,7 @@ input.error, select.error {
 }
 
 .top-logo {
-    max-height: 200px; 
+    max-height: 180px; 
     object-fit: contain;
 }
 
@@ -243,7 +243,7 @@ input.error, select.error {
 
     /* Mobile mein main logo ki size choti karni hogi */
     .top-logo {
-        max-height: 100px; 
+        max-height: 90px; 
         width: auto;
     }
 
