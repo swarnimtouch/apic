@@ -215,6 +215,7 @@ input.error, select.error {
     height: auto;
     object-fit: cover;
     border: 2px solid rgba(255,255,255,0.5); /* Image ke aaju baju halki white border aayegi */
+    border-radius: 20px !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -231,5 +232,37 @@ input.error, select.error {
     .video-box {
         max-width: 95%; /* Size badhane ke liye 480px se 650px kar diya */
         margin: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    /* Header container ki padding kam kar di taaki edge se lage rahein */
+    .hero-section > .d-flex {
+        padding: 10px 15px !important;
+    }
+
+    /* Mobile mein main logo ki size choti karni hogi */
+    .top-logo {
+        max-height: 100px; 
+        width: auto;
+    }
+
+    /* Store buttons (iOS/Android) ko mobile mein chota karna */
+    .top-store-btn {
+        height: 35px; 
+        width: auto;
+    }
+    
+    /* Buttons ke beech ka gap kam karne ke liye */
+    .gap-2 {
+        gap: 0.5rem !important;
+    }
+
+    /* ---> NAYA CODE YAHAN ADD KIYA HAI <--- */
+    /* Mobile me launch badge ki size kam karne ke liye */
+    .launch-badge {
+        padding: 7px 18px;    /* Purana: 14px 35px tha. Isey kam karke height aur width choti ki hai */
+        font-size: 0.85rem;    /* Purana: 1.15rem tha. Text ki size choti ki hai */
+        margin-top: 80px !important
     }
 }
