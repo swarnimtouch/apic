@@ -46,7 +46,7 @@
 
             <div class="swiper mySwiper mt-4 mb-5" data-aos="fade-up" data-aos-delay="400">
                 <div class="swiper-wrapper align-items-center">
-                    <div class="swiper-slide"><img src="{{asset('images/slide1.jpg')}}" alt="Slide 1" class="img-fluid rounded shadow-sm"></div>
+                    {{-- <div class="swiper-slide"><img src="{{asset('images/slide1.jpg')}}" alt="Slide 1" class="img-fluid rounded shadow-sm"></div> --}}
                     <div class="swiper-slide"><img src="{{asset('images/slide2.jpg')}}" alt="Slide 2" class="img-fluid rounded shadow-sm"></div>
                     <div class="swiper-slide"><img src="{{asset('images/slide3.jpg')}}" alt="Slide 3" class="img-fluid rounded shadow-sm"></div>
                     <div class="swiper-slide"><img src="{{asset('images/slide4.jpg')}}" alt="Slide 4" class="img-fluid rounded shadow-sm"></div>
