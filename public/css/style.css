@@ -68,6 +68,10 @@ body {
     box-shadow: 0 0 0 0 rgba(98, 0, 234, 0.7);
 }
 
+.hero-title{
+    margin-top: 120px !important;
+}
+
 @keyframes pulseWave {
     0% {
         transform: scale(0.95);
@@ -264,5 +268,11 @@ input.error, select.error {
         padding: 7px 18px;    /* Purana: 14px 35px tha. Isey kam karke height aur width choti ki hai */
         font-size: 0.85rem;    /* Purana: 1.15rem tha. Text ki size choti ki hai */
         margin-top: 80px !important
+    }
+}
+
+@media (max-width: 768px){
+    .hero-title{
+        margin-top: 80px !important;
     }
 }
