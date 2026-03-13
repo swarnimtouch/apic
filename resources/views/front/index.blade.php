@@ -33,9 +33,9 @@
         </div>
 
         <div class="container position-relative z-index-2">
-            <div class="launch-badge mb-3 mt-5" data-aos="zoom-in" data-aos-delay="100">
+            {{-- <div class="launch-badge mb-3 mt-5" data-aos="zoom-in" data-aos-delay="100">
                 <i class="fas fa-rocket me-2"></i> Launching Soon - 1st April (Part 1)
-            </div>
+            </div> --}}
 
             <h1 class="display-4 fw-bold text-dark mb-3 mt-5" data-aos="fade-up" data-aos-delay="200">
                 Transforming Clinical Decisions with AI
