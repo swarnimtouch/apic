@@ -158,10 +158,19 @@
     </section>
 
     <footer class="text-center py-4 bg-dark text-white">
-        <p class="mb-2 small">&copy; 2026 APIC. All Rights Reserved. Transforming healthcare.</p>
-        <p class="mb-0 small">
+        <p class="mb-2 small">
+            &copy; 2026 APIC. All Rights Reserved. Transforming healthcare.
+        </p>
+
+        <p class="mb-1 small">
             <a href="mailto:kuldeep@swarnimtouch.com" class="text-white text-decoration-none">
                 <i class="fas fa-envelope me-2"></i>kuldeep@swarnimtouch.com
+            </a>
+        </p>
+
+        <p class="mb-0 small">
+            <a href="tel:+916352966955" class="text-white text-decoration-none">
+                <i class="fas fa-phone me-2"></i>+91 6352966955
             </a>
         </p>
     </footer>
